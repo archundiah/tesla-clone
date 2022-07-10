@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Fade } from 'react-awesome-reveal'
 
 const Section = ({
   title,
@@ -9,16 +10,20 @@ const Section = ({
 }) => {
   return (
     <Wrap bgImage={backgroundImage}>
-      <ItemText>
-        <h1>{title}</h1>
-        <p>{description}</p>
-      </ItemText>
+      <Fade direction='up'>
+        <ItemText>
+          <h1>{title}</h1>
+          <p>{description}</p>
+        </ItemText>
+      </Fade>
       <Buttons>
-        <ButtonGroup>
-          <LeftButton>{leftButtonText}</LeftButton>
-          {rightButtonText && <RightButton>{rightButtonText}</RightButton>}
-        </ButtonGroup>
-        <DownArrow src='/images/down-arrow.svg' />
+        <Fade direction='down'>
+          <ButtonGroup>
+            <LeftButton>{leftButtonText}</LeftButton>
+            {rightButtonText && <RightButton>{rightButtonText}</RightButton>}
+          </ButtonGroup>
+          <DownArrow src='/images/down-arrow.svg' />
+        </Fade>
       </Buttons>
     </Wrap>
   )

@@ -1,10 +1,12 @@
 import styled from 'styled-components'
 
 import Section from './Section'
+import Header from './Header'
 
 const Home = () => {
   return (
     <Container>
+      <Header />
       <Section
         title='Model S'
         description='Order Online for Touchless Delivery'
